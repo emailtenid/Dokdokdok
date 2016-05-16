@@ -20,24 +20,11 @@ public class MemberDAO {
 	public void setDataSource(DataSource dataSource) {
 		this.jdbcTemplateObject = new JdbcTemplate(dataSource);
 	}
-	/*
+
 	public Member getMember(String id) {
 		String sqlStatement = "select * from member where id=?";
 
 		return jdbcTemplateObject.queryForObject(sqlStatement, new Object[] { id }, new MemberMapper());
-	}
-	
-	public List<Member> getMembers() {
-		String sqlStatement = "select * from member";
-
-		return jdbcTemplateObject.query(sqlStatement, new MemberMapper());
-	}
-	*/
-	
-	public Member getMember(String id){
-		String sqlStatement = "select * from member where id=?";
-				
-		return jdbcTemplateObject.queryForObject(sqlStatement, new Object[] { id }, new MemberMapper());		
 	}
 
 }

@@ -14,7 +14,8 @@
 	</br> BOOK NAME:
 	<c:out value="${book_name}"></c:out>
 	</br> APPLY TEXT:
-	<c:out value="${apply_text}"></c:out>
+	<c:out value="${apply_text}"></c:out></br>
+		
 
 </body>
 </html>

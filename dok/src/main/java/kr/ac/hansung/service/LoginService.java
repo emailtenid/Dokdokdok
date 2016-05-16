@@ -15,15 +15,14 @@ public class LoginService {
 		this.memberDAO = memberDAO;
 	}
 
-	public Member check(String id, String password){
-		
+	public Member check(String id, String password) {
+
 		Member student = memberDAO.getMember(id);
-		
-		if(student.getPassword().equals(password)){
+
+		if (student.getPassword().equals(password)) {
 			return student;
-		}
-		else{
-			return null;		
+		} else {
+			return null;
 		}
 	}
 }

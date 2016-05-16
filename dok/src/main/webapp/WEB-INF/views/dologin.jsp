@@ -9,13 +9,14 @@
 </head>
 <body>
 
-	ID:
-	<c:out value="${id}"></c:out>
-	</br> PASSWORD:
-	<c:out value="${password}"></c:out>
-	<form action="apply" method="get">
-		<p><a href = "/dok/apply">Show Session</a></p>
-	</form>
+	ID :
+	<c:out value="${member.id}"></c:out>
+	</br> PASSWORD :
+	<c:out value="${member.password}"></c:out>
+	</br> NAME :
+	<c:out value="${member.name}"></c:out>
+	
+	<p><a href = "/dok/apply">Do Apply</a></p>
 
 </body>
 </html>

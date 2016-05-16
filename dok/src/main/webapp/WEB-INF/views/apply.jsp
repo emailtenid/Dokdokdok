@@ -7,11 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="apply" method="get">
-		ID: <input type="text" name="id" /> <br />
-		신청할 도서명: <input type="text" name="book_name" /> <br /> 
-		신청 사유: <input type="text" name="apply_text" /> <br /> 
-		<input type="submit" value="도서 신청" />
+	<form action="doapply" method="get">
+		Book Name : <input type="text" name="book_name" /> <br /> 
+		Apply Text : <input type="text" name="apply_text" /> <br /> 
+		<input type="submit" value="Apply" />
 	</form>
 </body>
 </html>

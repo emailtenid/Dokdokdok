@@ -13,6 +13,7 @@ public class MemberMapper implements RowMapper<Member> {
 
 		member.setId(rs.getString("id"));
 		member.setPassword(rs.getString("password"));
+		member.setName(rs.getString("name"));
 
 		return member;
 	}

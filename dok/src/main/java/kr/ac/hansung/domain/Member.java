@@ -5,17 +5,15 @@ public class Member {
 	private String id;
 	private String password;
 	private String name;
-	private int point;
-	private int level;
-	private String meber_url;
 
 	public Member() {
 
 	}
 
-	public Member(String id, String password, String name, int point, int level) {
+	public Member(String id, String password, String name) {
 		this.id = id;
 		this.password = password;
+		this.name = name;
 	}
 
 	public String getId() {
@@ -24,6 +22,14 @@ public class Member {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {
@@ -36,6 +42,6 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", password=" + password +  "]";
+		return "Member [id=" + id + ", password=" + password + ", name =" + name + "]";
 	}
 }
