@@ -3,8 +3,8 @@ package kr.ac.hansung.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.ac.hansung.dao.Member;
 import kr.ac.hansung.dao.MemberDAO;
+import kr.ac.hansung.domain.Member;
 
 @Service("loginService")
 public class LoginService {
@@ -15,15 +15,15 @@ public class LoginService {
 		this.memberDAO = memberDAO;
 	}
 
-	public Member check(String id){
+	public Member check(String id, String password){
 		
 		Member student = memberDAO.getMember(id);
 		
-		if(student.getId()==null){
-			return null;
+		if(student.getPassword().equals(password)){
+			return student;
 		}
 		else{
-			return student;		
+			return null;		
 		}
 	}
 }

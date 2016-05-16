@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import kr.ac.hansung.dao.Member;
+import kr.ac.hansung.domain.Member;
 import kr.ac.hansung.service.LoginService;
 
 @Controller
+@SessionAttributes({"id","password"})
 public class LoginController {
 	private LoginService loginService;
 
@@ -22,15 +24,19 @@ public class LoginController {
 	@RequestMapping("/dologin")
 	public String showLogin(HttpServletRequest request, Model model) {
 
-		Member student = loginService.check(request.getParameter("id"));
+		String cid = request.getParameter("id");
+		String cpassword = request.getParameter("password");
+		
+		Member student = loginService.check(cid, cpassword);
 
-		if (student == null) {
-			return "loginfail";
-		} else {
+		if (student!= null) {
+
 			model.addAttribute("id", student.getId());
 			model.addAttribute("password", student.getPassword());
 
 			return "dologin";
+		} else {
+			return "loginfail";
 		}
 	}
 }

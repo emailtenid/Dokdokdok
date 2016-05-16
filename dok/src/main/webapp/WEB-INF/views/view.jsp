@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,13 +8,9 @@
 </head>
 <body>
 
-	ID:
-	<c:out value="${id}"></c:out>
-	</br> PASSWORD:
-	<c:out value="${password}"></c:out>
-	<form action="apply" method="get">
-		<p><a href = "/dok/apply">Show Session</a></p>
-	</form>
+View
+	<p>session id : ${id}
+	<p>session password : ${password}
 
 </body>
 </html>

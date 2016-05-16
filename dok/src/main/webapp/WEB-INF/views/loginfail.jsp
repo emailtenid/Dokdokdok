@@ -10,5 +10,8 @@
 
 Login Fail
 
+	<p>session id : ${id}
+	<p>session password : ${password}
+
 </body>
 </html>

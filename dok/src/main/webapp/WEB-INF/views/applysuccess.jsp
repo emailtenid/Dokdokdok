@@ -11,11 +11,10 @@
 
 	ID:
 	<c:out value="${id}"></c:out>
-	</br> PASSWORD:
-	<c:out value="${password}"></c:out>
-	<form action="apply" method="get">
-		<p><a href = "/dok/apply">Show Session</a></p>
-	</form>
+	</br> BOOK NAME:
+	<c:out value="${book_name}"></c:out>
+	</br> APPLY TEXT:
+	<c:out value="${apply_text}"></c:out>
 
 </body>
 </html>
